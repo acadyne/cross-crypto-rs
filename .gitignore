@@ -1,0 +1,4 @@
+# Ignorar archivos generados
+target/
+Cargo.lock
+*.rs.bk

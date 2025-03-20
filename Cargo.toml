@@ -1,0 +1,29 @@
+[package]
+name = "cross-crypto-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Jose Fabian Soltero Escobar <acadyne@gmail.com>"]
+description = "Librería de criptografía en Rust compatible con Python y JavaScript"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/acadyne/cross-crypto-rs"
+keywords = ["crypto", "rsa", "aes", "encryption", "security"]
+categories = ["cryptography", "encoding", "command-line-utilities"]
+readme = "README.md"
+
+[dependencies]
+openssl = "0.10"
+aes-gcm = "0.10"
+rand = "0.8"
+serde_json = "1.0"
+base64 = "0.21"
+clap = { version = "4.2", features = ["derive"] }
+
+[[bin]]
+name = "cross_crypto_rs"
+path = "src/main.rs"
+
+[lib]
+name = "cross_crypto_rs"
+path = "src/lib.rs"
+
+
