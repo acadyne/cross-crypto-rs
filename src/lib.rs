@@ -98,6 +98,5 @@ pub fn decrypt_hybrid(encrypted_data_json: &str, private_key_pem: &str) -> Strin
         &tag,
     ).expect("Error al desencriptar AES");
 
-    // String::from_utf8(plaintext).expect("Error al convertir UTF-8")
     String::from_utf8_lossy(&plaintext).to_string()
 }
